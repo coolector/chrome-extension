@@ -1,0 +1,23 @@
+{
+  "name": "Coolector",
+  "homepage": "https://github.com/coolector/chrome_extension",
+  "authors": [
+    "Coolector"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "isInViewport": "^2.4.2",
+    "jquery": "^3.1.1",
+    "jquery-fracs": "^0.15.1",
+    "handlebars": "^4.0.5"
+  }
+}

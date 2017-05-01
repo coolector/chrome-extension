@@ -1,0 +1,33 @@
+{
+  "name": "coolector-chrome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolector/chrome_extension.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coolector/chrome_extension/issues"
+  },
+  "homepage": "https://github.com/coolector/chrome_extension#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "base64-js": "^1.2.0",
+    "bower-resolve-webpack-plugin": "^1.0.2",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "handlebars": "^4.0.6",
+    "handlebars-loader": "^1.4.0",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3"
+  }
+}
