@@ -1,0 +1,8 @@
+#coolector-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2147483647;
+}

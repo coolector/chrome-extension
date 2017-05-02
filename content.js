@@ -1,11 +1,28 @@
 'use strict';
 
-let ItemRepository = require('./entity/itemRepository').ItemRepository;
+require('./css/bootstrap.css');
+require('./css/content.css');
+const PluginRepository = require('./plugins/pluginRepository').PluginRepository;
 
-let itemRepo = new ItemRepository();
-let item = itemRepo.load(1);
+let pluginRepository = PluginRepository.instance;
+let plugins = pluginRepository.findPlugins(window.location.href);
 
-console.log(item);
+/**
+ * Display popup
+ */
+function showPopup() {
+    let htmlPopup = require('./handlebars/popup.handlebars');
+    let popup = $('#coolector-box');
+    if (popup.eq(0).length) {
+        popup.html();
+    }
+    else {
+        $('body').append(htmlPopup());
+    }
+}
+
+showPopup();
+
 
 // var $ = require('jquery');
 

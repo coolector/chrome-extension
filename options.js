@@ -8,7 +8,6 @@ const PluginRepository = require('./plugins/pluginRepository').PluginRepository;
 const $ = require('jquery');
 
 let htmlCollector = require('./handlebars/collector-options.handlebars');
-console.log(htmlCollector);
 
 let pluginRepository = PluginRepository.instance;
 let plugins = pluginRepository.findPlugins();

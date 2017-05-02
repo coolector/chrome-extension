@@ -1,11 +1,7 @@
 const path = require("path");
 const BowerResolvePlugin = require("bower-resolve-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const bootstrapPath = path.join(
-    __dirname,
-    'bower_components/bootstrap/dist/css'
-);
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -24,7 +20,14 @@ module.exports = {
         modules: [
             'bower_components',
             'node_modules',
-            bootstrapPath
+            path.join(
+                __dirname,
+                'bower_components/bootstrap/dist/css'
+            ),
+            path.join(
+                __dirname,
+                'bower_components/bootstrap/dist/js'
+            )
         ],
         descriptionFiles: ['bower.json', 'package.json'],
         mainFields: ['main', 'browser']
@@ -56,6 +59,10 @@ module.exports = {
     },
     devtool: "source-map",
     plugins: [
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("[name].css"),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ]
 };
