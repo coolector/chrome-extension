@@ -3,13 +3,26 @@
         <div class="coolector-panel-heading" role="tab" id="headingOne">
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <h4 class="coolector-panel-title">
-                    Collapsible Group Item #1
+                    <span class="coolector-icon" style="float: right" aria-hidden="true">
+                        {{> icon-open}}
+                    </span>
+                    Coolector
                 </h4>
             </a>
         </div>
         <div id="collapseOne" class="coolector-panel-collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="coolector-panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <button style="float: right" type="button" class="coolector-btn coolector-btn-default" aria-label="Left Align">
+                    <span class="coolector-icon" aria-hidden="true">
+                        {{> icon-delete }}
+                    </span>
+                </button>
+                Item saved.
+                <form>
+                    <div class="coolector-form-group">
+                        <input id="coolector-tags" type="text" class="coolector-form-control" placeholder="tags">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -17,7 +30,10 @@
         <div class="coolector-panel-heading" role="tab">
             <a href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <h4 class="coolector-panel-title">
-                    Collapsible Group Item #1
+                    <span class="coolector-icon" style="float: right" aria-hidden="true">
+                        {{> icon-open}}
+                    </span>
+                    Camnotifier
                 </h4>
             </a>
         </div>

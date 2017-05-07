@@ -1,8 +1,17 @@
 #coolector-box {
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 25px;
     width: 300px;
     transition: all 0.2s ease-in-out;
     z-index: 2147483647;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+}
+
+#coolector-box .coolector-icon svg {
+    width: 15px;
+    height: 15px;
 }

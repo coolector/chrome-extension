@@ -45,7 +45,16 @@ const PluginRepository = class PluginRepository {
      * @param url
      */
     findPlugins(url = null) {
-        return this.plugins;
+        let plugins = this.plugins.filter(function (plugin) {
+            let collectors = plugin.collectors.filter(function (colector) {
+                let reg = new RegExp(colector.domain, 'i');
+                return url.match(reg) !== false;
+            });
+
+            return collectors && collectors.length;
+        }, this);
+
+        return plugins;
     }
 
     /**

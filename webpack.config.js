@@ -29,6 +29,9 @@ module.exports = {
                 'bower_components/bootstrap/dist/js'
             )
         ],
+        alias: {
+            'emitter': path.resolve(__dirname, 'node_modules/component-emitter/index.js'),
+        },
         descriptionFiles: ['bower.json', 'package.json'],
         mainFields: ['main', 'browser']
     },
