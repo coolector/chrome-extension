@@ -30,5 +30,8 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "domjson": "^0.1.2",
+    "is-in-viewport": "^3.0.0"
+  }
 }

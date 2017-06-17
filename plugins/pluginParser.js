@@ -1,7 +1,7 @@
 'use strict';
 
 const Plugin = require('./plugin').Plugin;
-const Collector = require('../entity/collector').Collector;
+const Collector = require('../collectors/collector').Collector;
 const $ = require('jquery');
 /**
  * Parse new plugin manifest and create new plugin object
@@ -26,7 +26,9 @@ const PluginParser = class {
                 let collector = new Collector();
                 collector.id = collectorJson.id;
                 collector.type = collectorJson.type;
+                collector.parent = collectorJson.parent;
                 collector.config = collectorJson.config;
+                collector.weight = collectorJson.weight;
                 plugin.collectors.push(collector);
             });
         }

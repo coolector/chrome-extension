@@ -7,13 +7,27 @@ require('./js/bootstrap-tokenfield.js');
 require('./css/bootstrap-tokenfield.css');
 require('./css/tokenfield-typeahead.css');
 const PluginRepository = require('./plugins/pluginRepository').PluginRepository;
+const CollectorExecutor = require('./collectors/collectorExecutor').CollectorExecutor;
+const Item = require('./entity/item').Item;
 
+let url = window.location.href;
 let pluginRepository = PluginRepository.instance;
-let plugins = pluginRepository.findPlugins(window.location.href);
+let plugins = pluginRepository.findPlugins(url);
+let results = null;
 
-plugins.forEach(function (plugin) {
-    plugin.
-});
+setTimeout(function () {
+    plugins.forEach(function (plugin) {
+        let collectors = plugin.findCollectors(url);
+        let collectorExecutor = new CollectorExecutor(collectors);
+        results = collectorExecutor.execute(null);
+
+        let item = new Item();
+        item.url = window.location.href;
+        item.collectors = results;
+        let repo = plugin.getItemRepository();
+        repo.save(item);
+    });
+}, 1000);
 
 /**
  * Display popup
@@ -61,7 +75,7 @@ setTimeout(function () {
 }, 200);
 
 
-// var $ = require('jquery');
+    // var $ = require('jquery');
 
 // console.log($);
 
