@@ -1,41 +1,26 @@
-<div class="coolector-panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="coolector-panel coolector-panel-default">
-        <div class="coolector-panel-heading" role="tab" id="headingOne">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h4 class="coolector-panel-title">
-                    <span class="coolector-icon" style="float: right" aria-hidden="true">
-                        {{> icon-open}}
-                    </span>
-                    Coolector
-                </h4>
-            </a>
-        </div>
-        <div id="collapseOne" class="coolector-panel-collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="coolector-panel-body">
-                <button style="float: right" type="button" class="coolector-btn coolector-btn-default" aria-label="Left Align">
-                    <span class="coolector-icon" aria-hidden="true">
-                        {{> icon-delete }}
-                    </span>
-                </button>
-                Item saved.
-                <form>
-                    <div class="coolector-form-group">
-                        <input id="coolector-tags" type="text" class="coolector-form-control" placeholder="tags">
-                    </div>
-                </form>
-            </div>
+<div class="coolector-box">
+    <div class="coolector-box-title">
+        Coolector
+        <div class="img-open">
+            {{> icon-open }}
         </div>
     </div>
-    <div class="coolector-panel coolector-panel-default">
-        <div class="coolector-panel-heading" role="tab">
-            <a href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h4 class="coolector-panel-title">
-                    <span class="coolector-icon" style="float: right" aria-hidden="true">
-                        {{> icon-open}}
-                    </span>
-                    Camnotifier
-                </h4>
-            </a>
+    <div class="coolector-box-content">
+        <div class="coolector-box-content-title">
+            Item saved.
+            <img src="images/more.svg" />
+            <div class="coolector-box-title-submenu">
+                <div class="coolector-box-title-submenu-button rttbtn1"><img src="images/delete.svg" /> Remove Item</div>
+                <div class="coolector-box-title-submenu-button rttbtn2"><img src="images/open.svg" /> Open Coolector</div>
+            </div>
+        </div>
+        <div class="coolector-box-content-tags">
+            <img src="images/tag.svg" />
+            <input type="text" class="coolector-box-content-tags-input" placeholder="Add tags" />
+        </div>
+        <img src="images/girl.jpg" class="coolector-box-content-image" />
+        <div class="coolector-box-content-text">
+            Some title that can extend on multiple pages if we need and want.
         </div>
     </div>
 </div>

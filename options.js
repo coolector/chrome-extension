@@ -3,7 +3,7 @@
 require('bootstrap.css');
 require('./css/options.css');
 const PluginParser = require('./plugins/pluginParser').PluginParser;
-const PluginRepository = require('./plugins/pluginRepository').PluginRepository;
+const PluginRepository = require('./plugins/PluginRepository').PluginRepository;
 
 const $ = require('jquery');
 

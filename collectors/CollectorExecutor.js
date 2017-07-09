@@ -13,7 +13,7 @@ const CollectorInViewSelector = require('./collectorInViewSelector').CollectorIn
  *
  * @type {CollectorExecutor}
  */
-let CollectorExecutor = class {
+export default class {
 
     /**
      * Collectors executor receives a collectors array of Collector object
@@ -99,8 +99,4 @@ let CollectorExecutor = class {
 
         return output;
     };
-};
-
-module.exports = {
-    CollectorExecutor: CollectorExecutor
 };

@@ -1,14 +1,15 @@
 'use strict';
 
-const Plugin = require('./plugin').Plugin;
-const Collector = require('../collectors/collector').Collector;
+import Plugin from './Plugin';
+import Collector from '../collectors/Collector';
 const $ = require('jquery');
+
 /**
  * Parse new plugin manifest and create new plugin object
  *
  * @type {PluginParser}
  */
-const PluginParser = class {
+export default class PluginParser {
 
     fromJSON(json) {
         let plugin = new Plugin();
@@ -39,8 +40,4 @@ const PluginParser = class {
     toJSON(plugin) {
 
     }
-};
-
-module.exports = {
-    PluginParser: PluginParser
 };

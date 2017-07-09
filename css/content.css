@@ -1,5 +1,10 @@
+.coolector-wrapper :not(path), #coolector-box::before, #coolector-box::after, #coolector-box ::before, #coolector-box ::after, #pkt_ext_newtab :not(path), #pkt_ext_newtab::before, #pkt_ext_newtab::after, #pkt_ext_newtab ::before, #pkt_ext_newtab ::after, #coolector-box input[type="text"], #coolector-box input[type="input"], #coolector-box input[type="password"], #coolector-box input[type="email"], #coolector-box input[type="number"], #coolector-box input[type="url"], #coolector-box input[type="tel"], #coolector-box input[type="search"] {
+    all: unset;
+}
+
 #coolector-box {
-    position: fixed;
+    all: initial;
+    position: absolute;
     top: 10px;
     right: 25px;
     width: 300px;

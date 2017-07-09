@@ -1,6 +1,6 @@
 'use strict';
 
-const PluginParser = require('./pluginParser').PluginParser;
+import PluginParser from './PluginParser';
 const singleton = Symbol();
 const singletonEnforcer = Symbol();
 
@@ -9,7 +9,7 @@ const singletonEnforcer = Symbol();
  *
  * @type {PluginRepository}
  */
-const PluginRepository = class PluginRepository {
+export default class PluginRepository {
 
     constructor(enforcer) {
         this.plugins = [];
@@ -121,8 +121,4 @@ const PluginRepository = class PluginRepository {
     save() {
         localStorage.setItem('plugins', JSON.stringify(this.plugins));
     }
-};
-
-module.exports = {
-    PluginRepository: PluginRepository
 };

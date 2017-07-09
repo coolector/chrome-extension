@@ -1,6 +1,9 @@
 'use strict';
 
-const Item = class {
+/**
+ * Item
+ */
+export default class Item {
 
     constructor() {
         this.id = null;
@@ -14,6 +17,3 @@ const Item = class {
     }
 };
 
-module.exports = {
-    Item: Item
-};

@@ -1,0 +1,225 @@
+.coolector-wrapper :not(path), .coolector-wrapper::before, .coolector-wrapper::after, .coolector-wrapper ::before, .coolector-wrapper ::after, #pkt_ext_newtab :not(path), #pkt_ext_newtab::before, #pkt_ext_newtab::after, #pkt_ext_newtab ::before, #pkt_ext_newtab ::after, .coolector-wrapper input[type="text"], .coolector-wrapper input[type="input"], .coolector-wrapper input[type="password"], .coolector-wrapper input[type="email"], .coolector-wrapper input[type="number"], .coolector-wrapper input[type="url"], .coolector-wrapper input[type="tel"], .coolector-wrapper input[type="search"] {
+    all: unset;
+}
+
+.coolector-wrapper {
+    all: initial;
+}
+
+.coolector-wrapper
+{
+    transition: all 0.2s ease-in-out;
+    z-index: 2147483647;
+    font-size: 14px;
+    font-family: Arial, Verdana, Georgia, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 320px;
+}
+
+html .coolector-wrapper * {
+    font-family: Arial, Verdana, Georgia, Helvetica, sans-serif;
+    color: #000;
+}
+
+html .coolector-wrapper.coolector-hidden {
+    transform: translate3d(0px, -130%, 0px);
+}
+
+html .coolector-wrapper .coolector-notification {
+    text-align: center;
+    font-size: 15px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    border-top: 3px solid #e9a33a;
+    khtml-border-radius: 6px;
+    moz-border-radius: 6px;
+    webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #e9e9e9;
+    margin-left: -260px;
+    padding: 25px 20px;
+    width: 500px;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    z-index: 500;
+    display: block;
+}
+
+html .coolector-wrapper .coolector-notification a {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: #3299bb;
+    text-decoration: underline;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box {
+    overflow: hidden;
+    khtml-border-radius: 6px;
+    moz-border-radius: 6px;
+    webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.54);
+    margin-bottom: 15px;
+    display: block;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-title {
+    border-bottom: 2px solid #e9a33a;
+    padding: 8px 12px;
+    khtml-border-radius: 6px 6px 0 0;
+    moz-border-radius: 6px 6px 0 0;
+    webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+    background: rgb(28, 126, 158);
+    background: -moz-linear-gradient(top, rgba(28, 126, 158, 1) 0%, rgba(48, 150, 184, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(28, 126, 158, 1) 0%, rgba(48, 150, 184, 1) 100%);
+    background: linear-gradient(to bottom, rgba(28, 126, 158, 1) 0%, rgba(48, 150, 184, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c7e9e', endColorstr='#3096b8', GradientType=0);
+    display: block;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-title .img-open {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin: 3px 0;
+    padding: 0;
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content {
+    padding: 15px;
+    background: #e9e9e9;
+    display: block;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title {
+    position: relative;
+    color: #424242;
+    font-weight: normal;
+    font-size: 15px;
+    display: block;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu {
+    display: none;
+    background: #e9e9e9;
+    border: 1px solid #bcbcbc;
+    position: absolute;
+    right: -10px;
+    top: 19px;
+    z-index: 600;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu img {
+    width: 25px;
+    height: 30px;
+    margin: 0;
+    display: block;
+    float: left
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button {
+    padding: 2px 10px 2px 5px;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    display: block;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button:hover {
+    background: #ff9900;
+    color: #fff;
+    display: inline;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn1 {
+    border-bottom: 1px solid #bcbcbc;
+    display: inline;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn1 img {
+    margin-right: 5px;
+    display: inline;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn2 img {
+    margin-right: 7px;
+    margin-left: 3px;
+    width: 20px;
+    height: 30px;
+    display: inline;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title img {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin: -5px -10px 0 0;
+    padding: 0;
+    float: right;
+    width: 40px;
+    height: 40px;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-tags {
+    position: relative
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-tags img {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 5px;
+    top: 24px;
+    width: 30px;
+    height: 30px
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-tags .coolector-box-content-tags-input {
+    border: 1px solid #bcbcbc;
+    color: #3299bb;
+    khtml-border-radius: 6px;
+    moz-border-radius: 6px;
+    webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-image {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #bcbcbc;
+}
+
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-text {
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}

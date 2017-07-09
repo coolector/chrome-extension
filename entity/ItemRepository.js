@@ -4,7 +4,7 @@ const $ = require('jquery');
 const AbstractRepository = require('./abstractRepository').AbstractRepository;
 const Item = require('./item').Item;
 
-const ItemRepository = class extends AbstractRepository {
+export default class extends AbstractRepository {
     constructor(apiUrl) {
         super();
         this._url = apiUrl;
@@ -62,8 +62,4 @@ const ItemRepository = class extends AbstractRepository {
 
     }
 
-};
-
-module.exports = {
-    ItemRepository: ItemRepository
 };

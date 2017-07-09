@@ -1,33 +1,17 @@
 'use strict';
 
 const Bloodhound = require('typeahead.js');
-require('./css/bootstrap.css');
-require('./css/content.css');
-require('./js/bootstrap-tokenfield.js');
-require('./css/bootstrap-tokenfield.css');
-require('./css/tokenfield-typeahead.css');
-const PluginRepository = require('./plugins/pluginRepository').PluginRepository;
-const CollectorExecutor = require('./collectors/collectorExecutor').CollectorExecutor;
-const Item = require('./entity/item').Item;
+// require('./css/bootstrap.css');
+// require('./css/content.css');
+// require('./js/bootstrap-tokenfield.js');
+// require('./css/bootstrap-tokenfield.css');
+// require('./css/tokenfield-typeahead.css');
 
-let url = window.location.href;
-let pluginRepository = PluginRepository.instance;
-let plugins = pluginRepository.findPlugins(url);
-let results = null;
+import MainController from './controllers/MainController';
 
-setTimeout(function () {
-    plugins.forEach(function (plugin) {
-        let collectors = plugin.findCollectors(url);
-        let collectorExecutor = new CollectorExecutor(collectors);
-        results = collectorExecutor.execute(null);
 
-        let item = new Item();
-        item.url = window.location.href;
-        item.collectors = results;
-        let repo = plugin.getItemRepository();
-        repo.save(item);
-    });
-}, 1000);
+let mainController = new MainController();
+mainController.dispatch();
 
 /**
  * Display popup
@@ -74,27 +58,3 @@ setTimeout(function () {
     });
 }, 200);
 
-
-    // var $ = require('jquery');
-
-// console.log($);
-
-// function getAttributes ( node ) {
-//     var i,
-//         attributeNodes = node.attributes,
-//         length = attributeNodes.length,
-//         attrs = {};
-
-//     for ( i = 0; i < length; i++ ) attrs[attributeNodes[i].name] = attributeNodes[i].value;
-//     return attrs;
-// }
-
-
-// var items = $('article>div img:in-viewport');
-// items.each(function () {
-//   var fracts = $(this).fracs();
-//   console.log(getAttributes(this));
-//   console.log(fracts.visible);
-// });
-
-// console.log(.fracs());

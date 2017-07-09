@@ -1,11 +1,15 @@
 'use strict';
 
-const ItemRepository = require('../entity/itemRepository').ItemRepository;
-const UserRepository = require('../entity/userRepository').UserRepository;
+import ItemRepository from '../entity/ItemRepository';
+import UserRepository from '../entity/UserRepository';
 
-const Plugin = class {
+/**
+ * Plugin
+ */
+export default class Plugin {
 
     constructor() {
+        this.id = null;
         this.name = null;
         this.description = null;
         this.version = null;
@@ -77,8 +81,4 @@ const Plugin = class {
 
         return collectors;
     }
-};
-
-module.exports = {
-    Plugin: Plugin
 };

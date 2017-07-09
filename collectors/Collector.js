@@ -1,6 +1,9 @@
 'use strict';
 
-let Collector = class {
+/**
+ * Collector
+ */
+export default class Collector {
 
     constructor() {
         this.type = null;
@@ -11,8 +14,4 @@ let Collector = class {
         this.parent = null;
         this.value = null;
     };
-};
-
-module.exports = {
-    Collector: Collector
 };
