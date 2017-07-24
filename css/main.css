@@ -15,8 +15,8 @@
     margin: 0;
     padding: 0;
     color: #000;
-    background: #fff;
-    position: absolute;
+    background: transparent;
+    position: fixed;
     top: 15px;
     right: 15px;
     width: 320px;
@@ -93,15 +93,15 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-title {
     display: block;
 }
 
-html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-title .img-open {
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-title img {
     cursor: pointer;
     display: block;
     position: relative;
-    margin: 3px 0;
+    margin: 0 0;
     padding: 0;
     float: right;
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content {
@@ -147,25 +147,22 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button:hover {
     background: #ff9900;
     color: #fff;
-    display: inline;
+    display: block;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn1 {
     border-bottom: 1px solid #bcbcbc;
-    display: inline;
+    display: block;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn1 img {
-    margin-right: 5px;
-    display: inline;
+    display: block;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu .coolector-box-title-submenu-button.rttbtn2 img {
-    margin-right: 7px;
-    margin-left: 3px;
-    width: 20px;
-    height: 30px;
-    display: inline;
+    display: block;
+    width: 21px;
+    margin: 0 2px;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title img {
