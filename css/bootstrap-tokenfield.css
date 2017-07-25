@@ -1,44 +1,13 @@
-/*!
- * bootstrap-tokenfield
- * https://github.com/sliptree/bootstrap-tokenfield
- * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
- */
-@-webkit-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-@keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-.coolector-bootstrap .tokenfield {
+.coolector-wrapper .tokenfield {
   height: auto;
   min-height: 34px;
   padding-bottom: 0px;
 }
-.coolector-bootstrap .tokenfield.focus {
-  border-color: #66afe9;
+.coolector-wrapper .tokenfield.focus {
+  border-color: #4894B8 !important;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.coolector-bootstrap .tokenfield .token {
+.coolector-wrapper .tokenfield .token {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -54,14 +23,14 @@
   vertical-align: top;
   cursor: default;
 }
-.coolector-bootstrap .tokenfield .token:hover {
+.coolector-wrapper .tokenfield .token:hover {
   border-color: #b9b9b9;
 }
-.coolector-bootstrap .tokenfield .token.active {
+.coolector-wrapper .tokenfield .token.active {
   border-color: #52a8ec;
   border-color: rgba(82, 168, 236, 0.8);
 }
-.coolector-bootstrap .tokenfield .token.duplicate {
+.coolector-wrapper .tokenfield .token.duplicate {
   border-color: #ebccd1;
   -webkit-animation-name: blink;
   animation-name: blink;
@@ -74,29 +43,30 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-.coolector-bootstrap .tokenfield .token.invalid {
+.coolector-wrapper .tokenfield .token.invalid {
   background: none;
   border: 1px solid transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  border-bottom: 1px dotted #d9534f;
+  border-bottom: 1px dotted #F69B1E;
 }
-.coolector-bootstrap .tokenfield .token.invalid.active {
+.coolector-wrapper .tokenfield .token.invalid.active {
   background: #ededed;
   border: 1px solid #ededed;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.coolector-bootstrap .tokenfield .token .token-label {
+.coolector-wrapper .tokenfield .token .token-label {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 4px;
   vertical-align: top;
+  line-height: 20px;
 }
-.coolector-bootstrap .tokenfield .token .close {
+.coolector-wrapper .tokenfield .token .close {
   font-family: Arial;
   display: inline-block;
   line-height: 100%;
@@ -107,8 +77,9 @@
   height: 100%;
   vertical-align: top;
   padding-right: 4px;
+  color: #B0B0B0;
 }
-.coolector-bootstrap .tokenfield .token-input {
+.coolector-wrapper .tokenfield .token-input {
   background: none;
   width: 60px;
   min-width: 60px;
@@ -119,84 +90,84 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.coolector-bootstrap .tokenfield .token-input:focus {
+.coolector-wrapper .tokenfield .token-input:focus {
   border-color: transparent;
   outline: 0;
   /* IE6-9 */
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.coolector-bootstrap .tokenfield.disabled {
+.coolector-wrapper .tokenfield.disabled {
   cursor: not-allowed;
   background-color: #eeeeee;
 }
-.coolector-bootstrap .tokenfield.disabled .token-input {
+.coolector-wrapper .tokenfield.disabled .token-input {
   cursor: not-allowed;
 }
-.coolector-bootstrap .tokenfield.disabled .token:hover {
+.coolector-wrapper .tokenfield.disabled .token:hover {
   cursor: not-allowed;
   border-color: #d9d9d9;
 }
-.coolector-bootstrap .tokenfield.disabled .token:hover .close {
+.coolector-wrapper .tokenfield.disabled .token:hover .close {
   cursor: not-allowed;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
-.coolector-bootstrap .has-warning .tokenfield.focus {
+.coolector-wrapper .has-warning .tokenfield.focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
-.coolector-bootstrap .has-error .tokenfield.focus {
+.coolector-wrapper .has-error .tokenfield.focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
-.coolector-bootstrap .has-success .tokenfield.focus {
+.coolector-wrapper .has-success .tokenfield.focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
-.coolector-bootstrap .tokenfield.input-sm,
-.coolector-bootstrap .input-group-sm .tokenfield {
+.coolector-wrapper .tokenfield.input-sm,
+.coolector-wrapper .input-group-sm .tokenfield {
   min-height: 30px;
   padding-bottom: 0px;
 }
-.coolector-bootstrap .input-group-sm .token,
-.coolector-bootstrap .tokenfield.input-sm .token {
+.coolector-wrapper .input-group-sm .token,
+.coolector-wrapper .tokenfield.input-sm .token {
   height: 20px;
   margin-bottom: 4px;
 }
-.coolector-bootstrap .input-group-sm .token-input,
-.coolector-bootstrap .tokenfield.input-sm .token-input {
+.coolector-wrapper .input-group-sm .token-input,
+.coolector-wrapper .tokenfield.input-sm .token-input {
   height: 18px;
   margin-bottom: 5px;
 }
-.coolector-bootstrap .tokenfield.input-lg,
-.coolector-bootstrap .input-group-lg .tokenfield {
+.coolector-wrapper .tokenfield.input-lg,
+.coolector-wrapper .input-group-lg .tokenfield {
   min-height: 45px;
   padding-bottom: 4px;
 }
-.coolector-bootstrap .input-group-lg .token,
-.coolector-bootstrap .tokenfield.input-lg .token {
+.coolector-wrapper .input-group-lg .token,
+.coolector-wrapper .tokenfield.input-lg .token {
   height: 25px;
 }
-.coolector-bootstrap .input-group-lg .token-label,
-.coolector-bootstrap .tokenfield.input-lg .token-label {
+.coolector-wrapper .input-group-lg .token-label,
+.coolector-wrapper .tokenfield.input-lg .token-label {
   line-height: 23px;
 }
-.coolector-bootstrap  .input-group-lg .token .close,
-.coolector-bootstrap  .tokenfield.input-lg .token .close {
+.coolector-wrapper  .input-group-lg .token .close,
+.coolector-wrapper  .tokenfield.input-lg .token .close {
   line-height: 1.3em;
 }
-.coolector-bootstrap  .input-group-lg .token-input,
-.coolector-bootstrap  .tokenfield.input-lg .token-input {
+.coolector-wrapper  .input-group-lg .token-input,
+.coolector-wrapper  .tokenfield.input-lg .token-input {
   height: 23px;
   line-height: 23px;
   margin-bottom: 6px;
   vertical-align: top;
 }
-.coolector-bootstrap .tokenfield.rtl {
+.coolector-wrapper .tokenfield.rtl {
   direction: rtl;
   text-align: right;
 }

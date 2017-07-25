@@ -2,6 +2,8 @@
 
 import '../css/main.css';
 import '../js/bootstrap-tokenfield.js';
+import '../css/bootstrap-tokenfield.css';
+import '../css/tokenfield-typeahead.css';
 
 /**
  * MainView
@@ -19,6 +21,7 @@ export default class MainView {
         if (!this.element.eq(0).length) {
             $('body').append(htmlPopup());
             this.element = $('#coolector-box');
+            this.element.hide();
 
             this.initTypeahead();
         }
@@ -35,6 +38,7 @@ export default class MainView {
          * Make popup visible
          */
         setTimeout(() => {
+            this.element.show();
             this.element.removeClass('coolector-hidden');
         }, 200);
 
@@ -85,7 +89,13 @@ export default class MainView {
         engine.initialize();
 
         $('#coolector-tags', this.element).tokenfield({
-            typeahead: [null, { source: engine.ttAdapter() }]
+            typeahead: [
+                null,
+                {
+                    source: engine.ttAdapter(),
+                    limit: 10
+                }
+            ]
         }).on('tokenfield:createdtoken', function (e) {
             console.log(e.attrs.value);
         }).on('tokenfield:removedtoken', function (e) {

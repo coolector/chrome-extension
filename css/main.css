@@ -63,7 +63,6 @@ html .coolector-wrapper .coolector-notification a {
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box {
-    overflow: hidden;
     khtml-border-radius: 6px;
     moz-border-radius: 6px;
     webkit-border-radius: 6px;
@@ -108,6 +107,10 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content {
     padding: 15px;
     background: #e9e9e9;
     display: block;
+    khtml-border-radius: 0 0 6px 6px;
+    moz-border-radius: 0 0 6px 6px;
+    webkit-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title {
@@ -116,6 +119,7 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .
     font-weight: normal;
     font-size: 15px;
     display: block;
+    margin-bottom: 15px;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-title .coolector-box-title-submenu {
@@ -185,13 +189,14 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 5px;
-    top: 24px;
+    left: 4px;
+    top: 6px;
     width: 30px;
-    height: 30px
+    height: 30px;
+    z-index: 1;
 }
 
-html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-tags .coolector-box-content-tags-input {
+html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-tags .tokenfield {
     border: 1px solid #bcbcbc;
     color: #3299bb;
     khtml-border-radius: 6px;
@@ -204,7 +209,8 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .
     margin: 0;
     display: block;
     width: 100%;
-    padding: 10px 10px 10px 35px;
+    padding: 6px 6px 0px 34px;
+    background-color: #fff;
 }
 
 html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .coolector-box-content-image {
@@ -219,4 +225,5 @@ html .coolector-wrapper .coolector-boxes .coolector-box .coolector-box-content .
     font-size: 14px;
     font-weight: normal;
     text-align: center;
+    display: block;
 }
