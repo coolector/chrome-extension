@@ -20,6 +20,7 @@ export default class Plugin {
         this.collectors = [];
         this.itemRepository = null;
         this.userRepository = null;
+        this.results = [];
     }
 
     /**
@@ -46,6 +47,15 @@ export default class Plugin {
         }
 
         return this.userRepository;
+    }
+
+    /**
+     * If plugin is enabled
+     *
+     * @returns {boolean}
+     */
+    isEnabled() {
+        return true === this.enable;
     }
 
     /**

@@ -2,18 +2,18 @@
 
 require('isInViewport');
 
-const CollectorSelector = require('./collectorSelector').CollectorSelector;
-const CollectorParentsSelector = require('./collectorParentsSelector').CollectorParentsSelector;
-const CollectorChildrenSelector = require('./collectorChildrenSelector').CollectorChildrenSelector;
-const CollectorFindSelector = require('./collectorFindSelector').CollectorFindSelector;
-const CollectorInViewSelector = require('./collectorInViewSelector').CollectorInViewSelector;
+import CollectorSelector from './CollectorSelector';
+import CollectorParentsSelector from './CollectorParentsSelector';
+import CollectorChildrenSelector from './CollectorChildrenSelector';
+import CollectorFindSelector from './CollectorFindSelector';
+import CollectorInViewSelector from './CollectorInViewSelector'
 
 /**
  * Execute a set of collectors on a piece of context
  *
  * @type {CollectorExecutor}
  */
-export default class {
+export default class CollectorExecutor {
 
     /**
      * Collectors executor receives a collectors array of Collector object
@@ -66,7 +66,7 @@ export default class {
     resultsToJSON() {
         let output = [];
         this.collectors.forEach((collector) => {
-            if (this.results[collector.id]) {
+            if (this.results[collector.id].length) {
                 let values = [];
                 this.results[collector.id].each(function () {
                     let element = $(this).prop("tagName").toLowerCase();

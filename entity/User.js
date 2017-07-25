@@ -3,7 +3,7 @@
 /**
  * User
  */
-export default class {
+export default class User {
 
     constructor () {
         this.email = null;

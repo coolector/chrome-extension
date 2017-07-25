@@ -1,8 +1,8 @@
 'use strict';
 
 const $ = require('jquery');
-const AbstractRepository = require('./abstractRepository').AbstractRepository;
-const Item = require('./item').Item;
+import AbstractRepository from './AbstractRepository';
+import Item from './Item';
 
 export default class extends AbstractRepository {
     constructor(apiUrl) {

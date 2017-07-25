@@ -1,6 +1,6 @@
 'use strict';
 
-const AbstractCollector = require('./abstractCollector').AbstractCollector;
+import AbstractCollector from './AbstractCollector'
 
 require('jquery-fracs');
 /**
@@ -8,7 +8,7 @@ require('jquery-fracs');
  *
  * @type {CollectorInViewSelector}
  */
-let CollectorInViewSelector = class extends AbstractCollector {
+export default class CollectorInViewSelector extends AbstractCollector {
 
     execute (context) {
         return $(this.collector.config.selector, context).isInViewport({ tolerance: 0 }).map(function (index) {
@@ -18,9 +18,5 @@ let CollectorInViewSelector = class extends AbstractCollector {
            return this;
         });
     }
-};
-
-module.exports = {
-    CollectorInViewSelector: CollectorInViewSelector
 };
 

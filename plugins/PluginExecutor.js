@@ -21,16 +21,26 @@ export default class PluginExecutor {
     }
 
     /**
+     * Any plugins match the URL?
+     */
+    hasPlugins() {
+        return this.plugins.length > 0;
+    }
+
+    /**
      * Start the process
      */
     execute() {
         this.plugins.forEach((plugin) => {
             let collectors = plugin.findCollectors(this.url);
             let collectorExecutor = new CollectorExecutor(collectors);
-            this.results.push({
-                plugin_id: plugin.id,
-                results: collectorExecutor.execute(null)
-            });
+            let results = collectorExecutor.execute(null);
+            if (results.length) {
+                this.results.push({
+                    plugin_id: plugin.id,
+                    results: results
+                });
+            }
         });
 
         return this.results;

@@ -1,6 +1,6 @@
 'use strict';
 
-const AbstractCollector = class {
+export default class AbstractCollector {
 
     /**
      * Wrapper for a general types collector
@@ -16,8 +16,4 @@ const AbstractCollector = class {
 
     }
 
-};
-
-module.exports = {
-    AbstractCollector: AbstractCollector
 };

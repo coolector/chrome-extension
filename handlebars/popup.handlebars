@@ -1,8 +1,12 @@
 <div id="coolector-box" class="coolector-wrapper coolector-hidden">
-    <!--<div class="coolector-notification">-->
-        <!--There is no collector active. <br /> Please go to <a href="#">settings</a> and activate or add collectors.-->
-    <!--</div>-->
+    {{#if message}}
+    <div class="coolector-notification">
+        {{{message}}}
+    </div>
+    {{/if}}
+    {{#if plugins.length}}
     <div class="coolector-boxes">
         {{> collector-list }}
     </div>
+    {{/if}}
 </div>

@@ -2,8 +2,8 @@
 
 require('bootstrap.css');
 require('./css/options.css');
-const PluginParser = require('./plugins/pluginParser').PluginParser;
-const PluginRepository = require('./plugins/PluginRepository').PluginRepository;
+import PluginParser from './plugins/PluginParser';
+import PluginRepository from './plugins/PluginRepository';
 
 const $ = require('jquery');
 
