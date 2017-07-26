@@ -20,6 +20,8 @@ export default class Plugin {
         this.collectors = [];
         this.itemRepository = null;
         this.userRepository = null;
+
+        // Temporary data used for display, should be moved to a separate object
         this.results = [];
     }
 

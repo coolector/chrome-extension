@@ -4,7 +4,6 @@
  * Item
  */
 export default class Item {
-
     constructor() {
         this.id = null;
         this.url = null;
@@ -14,6 +13,10 @@ export default class Item {
         this.image = null;
         this.createdAt = null;
         this.updatedAt = null;
+    }
+
+    getSerializeTags() {
+        return this.tags.join(', ');
     }
 };
 

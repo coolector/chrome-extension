@@ -19,13 +19,15 @@ export default class MainView {
     display() {
         let htmlPopup = require('../handlebars/popup.handlebars');
         this.element = $('#coolector-box');
-        if (!this.element.eq(0).length) {
-            $('body').append(htmlPopup(this.params));
-            this.element = $('#coolector-box');
-            this.element.hide();
-
-            this.initTypeahead();
+        if (this.element.eq(0).length) {
+            this.element.remove();
         }
+
+        $('body').append(htmlPopup(this.params));
+        this.element = $('#coolector-box');
+        this.element.hide();
+
+        this.initTypeahead();
 
         let menu = $('#coolector-menu', this.element);
 
@@ -65,7 +67,7 @@ export default class MainView {
         if (this.timeout) return;
         // Hide popup
         this.timeout = setTimeout(() => {
-            // this.element.addClass('coolector-hidden');
+            this.element.addClass('coolector-hidden');
         }, 3000);
     }
 

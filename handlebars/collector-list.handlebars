@@ -1,26 +1,31 @@
-{{#each plugins}}
-<div class="coolector-box" {{#unless results.length}}style="overflow: hidden;"{{/unless }}>
+{{#each items}}
+<div class="coolector-box" {{#unless has_results}}style="overflow: hidden;"{{/unless }}>
     <div class="coolector-box-title">
-        {{name}} v{{version}}
-        <a target="_blank" href="{{url}}">{{> icon-open-white }}</a>
+        {{#if plugin.logo}}
+        <img class="coolector-box-logo" src="{{plugin.logo}}" />
+        {{/if}}
+        {{plugin.name}} v{{plugin.version}}
+        <a target="_blank" href="{{plugin.url}}">{{> icon-open-white }}</a>
     </div>
-    {{#if results.length}}
+    {{#if has_results}}
     <div class="coolector-box-content">
         <div class="coolector-box-content-title">
-            Item saved.
+            Item collected.
             {{> icon-more }}
-            <div class="coolector-box-title-submenu" id="coolector-menu">
+            <div class="coolector-box-title-submenu" id="coolector-menu" style="display: none">
                 <div class="coolector-box-title-submenu-button rttbtn1">{{> icon-delete }} Remove Item</div>
-                <div class="coolector-box-title-submenu-button rttbtn2"><a target="_blank" href="{{url}}">{{> icon-open }} Open Coolector</a></div>
+                <div class="coolector-box-title-submenu-button rttbtn2"><a target="_blank" href="{{item.url}}">{{> icon-open }} View Item</a></div>
             </div>
         </div>
         <div class="coolector-box-content-tags">
             {{> icon-tag }}
-            <input type="text" id="coolector-tags" class="coolector-box-content-tags-input" placeholder="Add tags" />
+            <input type="text" id="coolector-tags" class="coolector-box-content-tags-input" placeholder="Add tags" value="{{tags}}"/>
         </div>
-        <img src="images/girl.jpg" class="coolector-box-content-image" />
+        <a target="_blank" href="{{item.url}}">
+            <img src="{{item.image}}" class="coolector-box-content-image" />
+        </a>
         <div class="coolector-box-content-text">
-            Some title that can extend on multiple pages if we need and want.
+            {{item.title}}
         </div>
     </div>
     {{/if}}

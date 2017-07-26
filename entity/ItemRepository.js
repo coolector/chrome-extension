@@ -2,6 +2,7 @@
 
 const $ = require('jquery');
 import AbstractRepository from './AbstractRepository';
+import ItemParser from './ItemParser';
 import Item from './Item';
 
 export default class extends AbstractRepository {
@@ -25,8 +26,8 @@ export default class extends AbstractRepository {
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(item),
             success: (data) => {
-                let item = new Item();
-                item.id = data.id
+                let parser = new ItemParser();
+                let item = parser.fromJSON(data);
                 callback(item);
             },
             dataType: 'json'
@@ -42,8 +43,8 @@ export default class extends AbstractRepository {
         $.ajax({
             url: url,
             success: (data) => {
-                let item = new Item();
-                item.id = data.id
+                let parser = new ItemParser();
+                let item = parser.fromJSON(data);
                 callback(item);
             },
             dataType: 'json'

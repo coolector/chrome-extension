@@ -37,7 +37,7 @@ export default class PluginParser {
         return plugin;
     }
 
-    toJSON(plugin) {
+        toJSON(plugin) {
 
-    }
+        }
 };
